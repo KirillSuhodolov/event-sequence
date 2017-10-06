@@ -4,7 +4,8 @@ This gem run understandable logic
 
 ## Important Notice
 
-WIP, be careful with using it. Contributors are welcome!
+WIP, be careful with using it, gem not ready.
+Contributors are welcome!
 
 ## Installation
 
