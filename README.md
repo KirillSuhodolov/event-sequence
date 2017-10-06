@@ -194,6 +194,33 @@ Logging execution
 ### Persister
 Store in database, execution process with current status, time in work, estimated time, who done and etc
 
+## Concept on nested definition
+Defined nested sequences with hash in root sequences, instead of inside each sequence
+
+```ruby
+sequence({
+  events: [
+    :event_first,
+    SequenceOne,
+    {
+      class: SequenceThree,
+      wait: [SequenceOne, SequenceTwo],
+      events: [
+        :nested_event_one,
+        :nested_event_two,
+        NestedSequenceOne,
+        {
+          class: NestedSequenceTwo,
+          events: [:nested_one_more]
+        }
+      ]
+    },
+    SequenceTwo,
+    :event_two
+  ]
+})
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
