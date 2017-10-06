@@ -133,6 +133,11 @@ Unlike [operationable](https://github.com/KirillSuhodolov/operationable) gem, th
 No separating by main operation and callbacks any more. Cause operation is sequence of events and callbacks are sequences for events too.
 Advantage of this is ability to create sequences and events on flight
 
+## Purpose
+Order business logic. Split execution from definition, execution from querying. See full picture from input method.
+Ability to understand for BA and generate UML.
+Tool to organize complex business logic and get rid of components strong coupling.
+
 ## Classes
 Main: Sequence and Event.
 Extra classes: Serializer, Waiter, Persister, Logger
